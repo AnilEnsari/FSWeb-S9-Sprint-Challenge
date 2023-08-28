@@ -59,15 +59,7 @@ export default function AppFunctional(props) {
     // Gridin kenarına ulaşıldığında başka gidecek yer olmadığı için,
     // şu anki indeksi değiştirmemeli.
 
-    if (
-      yon === "left" &&
-      (bIndex == 1 ||
-        bIndex == 2 ||
-        bIndex == 4 ||
-        bIndex == 5 ||
-        bIndex == 7 ||
-        bIndex == 8)
-    ) {
+    if (yon === "left" && bIndex % 3 !== 0) {
       setBIndex(bIndex - 1);
       setCounter(counter + 1);
       setErrorMessage("");
@@ -75,15 +67,7 @@ export default function AppFunctional(props) {
       setErrorMessage("Sola gidemezsiniz");
     }
 
-    if (
-      yon === "right" &&
-      (bIndex == 0 ||
-        bIndex == 1 ||
-        bIndex == 3 ||
-        bIndex == 4 ||
-        bIndex == 6 ||
-        bIndex == 7)
-    ) {
+    if (yon === "right" && bIndex % 3 !== 2) {
       setBIndex(bIndex + 1);
       setCounter(counter + 1);
       setErrorMessage("");
@@ -91,15 +75,7 @@ export default function AppFunctional(props) {
       setErrorMessage("Sağa gidemezsiniz");
     }
 
-    if (
-      yon === "up" &&
-      (bIndex == 3 ||
-        bIndex == 4 ||
-        bIndex == 5 ||
-        bIndex == 6 ||
-        bIndex == 7 ||
-        bIndex == 8)
-    ) {
+    if (yon === "up" && bIndex > 2) {
       setBIndex(bIndex - 3);
       setCounter(counter + 1);
       setErrorMessage("");
