@@ -19,7 +19,7 @@ export default function AppFunctional(props) {
   const postObject = {
     email: email,
     x: (bIndex + 1) % 3 == 0 ? 3 : (bIndex + 1) % 3,
-    y: bIndex < 3 ? 1 : bIndex < 6 ? 2 : bIndex < 9 ? 3 : false,
+    y: bIndex < 3 ? 1 : bIndex < 6 ? 2 : 3,
     steps: counter,
   };
 
